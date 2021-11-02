@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -10,7 +12,10 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
+  font-family: var(--font-open-sans);
+  color: var(--color-black);
+  font-size: 16px;
+  background-color: var(--color-white);
 }
 
 img {
