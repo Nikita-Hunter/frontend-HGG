@@ -1,0 +1,44 @@
+.header-top
+{
+    background-color: var(--color-light);
+    &__container
+    {
+        .header-top__inner
+        {
+            display: flex;
+            justify-content: flex-end;
+            .header-top__geo
+            {
+                display: flex;
+                align-items: center;
+                .header-top__geo--block
+                {
+                    padding: 15px 0;
+                    margin-right: 34.83px;
+                    display: flex;
+                    align-items: center;
+                    &:last-child
+                    {
+                        margin-right: 0;
+                    }
+                    img
+                    {
+                        margin-right: 10.13px;
+                    }
+                    span
+                    {
+                        color: var(--color-span);
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    a
+                    {
+                        color: var(--color-span);
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

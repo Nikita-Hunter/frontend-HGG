@@ -14,6 +14,7 @@ body {
   margin: 0;
   font-family: var(--font-open-sans);
   color: var(--color-black);
+  font-weight: 400;
   font-size: 16px;
   background-color: var(--color-white);
 }
@@ -50,7 +51,7 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1240px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
