@@ -1,0 +1,89 @@
+.about
+{
+    padding-top: 120px;
+    padding-bottom: 20px;
+    background-color: var(--color-gray);
+    .about__container
+    {
+        .about__inner
+        {
+            .about__column
+            {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 20px;
+                .about__column--left
+                {
+                    .about__title
+                    {
+                        margin-bottom: 16px;
+                        width: 549px;
+                        h2
+                        {
+                            font-size: 34px;
+                            line-height: 42px;
+                            font-weight: 400;
+                            text-align: left;
+                            font-family: var(--font-fugaz);
+                            text-transform: uppercase;
+                        }
+                    }
+                    .about__subtitle
+                    {
+                        width: 519px;
+                        h3
+                        {
+                            font-size: 18px;
+                            font-weight: 400;
+                            text-align: left;
+                            line-height: 28px;
+                        }
+                    }
+                }
+                .about__column--right
+                {
+                    .about__param
+                    {
+                        margin-bottom: 32px;
+                        p
+                        {
+                            font-size: 16px;
+                            line-height: 26px;
+                            font-weight: 300;
+                            text-align: left;
+                        }
+                    }
+                    .link-more
+                    {
+                        font-weight: 600;
+                        color: var(--color-primary);
+                        text-transform: capitalize;
+                        padding-bottom: 6px;
+                        position: relative;
+                        &:hover
+                        {
+                            &::after
+                            {
+                                width: 100%;
+                                opacity: 1;
+                            }
+                        }
+                        &::after
+                        {
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background-color: var(--color-primary);
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            display: block;
+                            transition: all .2s linear;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

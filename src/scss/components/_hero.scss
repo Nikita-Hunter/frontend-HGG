@@ -1,7 +1,7 @@
 .hero
 {
     position: relative;
-    height: 684px;
+    height: 679px;
     width: 100%;
     background-position: right top;
     background-repeat: no-repeat;
@@ -29,11 +29,13 @@
         z-index: 5;
         .hero__inner
         {
+            padding-top: 70px;
             .hero__content
             {
                 .hero__title
                 {
-                    max-width: 834px;
+                    max-width: 844px;
+                    margin-bottom: 16px;
                     h1
                     {
                         font-family: var(--font-fugaz);
@@ -41,12 +43,14 @@
                         color: var(--color-white);
                         text-align: left;
                         line-height: 52px;
+                        font-weight: 400;
+                        text-transform: uppercase;
                     }
                 }
                 .hero__param
                 {
                     max-width: 642px;
-                    margin-bottom: 40px;
+                    margin-bottom: 43px;
                     p
                     {
                         color: var(--color-white);

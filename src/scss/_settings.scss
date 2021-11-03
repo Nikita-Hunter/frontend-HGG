@@ -50,8 +50,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1240px;
+  padding: 0 60px;
+  max-width: 1440px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -61,7 +61,7 @@ main
 {
   max-width: 100%;
 }
-h1
+h1,h2,h3,h4,h5,h6,p
 {
   margin: 0;
   padding: 0;
