@@ -1,0 +1,121 @@
+.carousel 
+{
+    background-color: var(--color-gray);
+    width: 100%;
+    height: 700px;
+    position: relative;
+    &::after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background: url("../img/grange-bg.png");
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: repeat;
+        background-size: auto;
+        background-size: 89% 950px;
+        width: 100%;
+        height: 100%;
+        background-position: 100% -170px;
+        background-repeat: no-repeat;
+    }
+    .carousel__inner
+    {
+        position: relative;
+        z-index: 2;
+        padding-top: 90px;
+        .owl-carousel
+        {
+            position: relative;
+            width: 100%;
+            .owl-carousel__item
+            {
+                position: relative;
+                width: 777px;
+                height: 478px;
+                .owl-carousel__button
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .btn-play
+                    {
+                        padding: 9px 48px !important;
+                    }
+                }
+                .owl-carousel__item--img
+                {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+.prevv
+{
+    height: 476px;
+    width: 37px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--font-fugaz);
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    display: inline;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-acent);
+    transition: all .2s linear;
+    &:hover
+    {
+        background-color: var(--color-primary);
+    }
+    span
+    {
+        transform: rotate(-90deg);
+    }
+}
+.nextt
+{
+    height: 476px;
+    width: 37px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--font-fugaz);
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    display: inline;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-acent);
+    transition: all .2s linear;
+    &:hover
+    {
+        background-color: var(--color-primary);
+    }
+    span
+    {
+        transform: rotate(90deg);
+    }
+}
