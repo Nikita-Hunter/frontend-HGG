@@ -10,12 +10,14 @@
   <title>New site</title>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
   <div class="header-top">
@@ -42,6 +44,37 @@
       </div>
     </div>
   </div>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <img class="header__logo--icon" src="img/logo.svg" alt="Logo Hot Ground Gym">
+        </a>
+        <nav class="navbar">
+          <ul x-data="{ open: false }" class="list-reset navbar__list">
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">About us</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Classes</a></li>
+            <li @mouseover="open = true" class="navbar__item">
+              <a href="/" class="navbar__link link-reset">Camps <i class="fas fa-chevron-down"></i></a>
+              <ul x-show="open" @mouseout="open = false" class="list-reset drop-down">
+                <li class="drop-down__item">
+                  <a href="/" class="drop-down__link link-reset">Summer Camp</a>  
+                </li>
+                <li class="drop-down__item"><a href="/" class="drop-down__link link-reset">Winter Break Camp</a></li>
+                <li class="drop-down__item"><a href="/" class="drop-down__link link-reset">Spring Break Camp</a></li>
+                <li class="drop-down__item"><a href="/" class="drop-down__link link-reset">No school days + one day camp</a></li>
+              </ul>
+            </li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Birthday Party</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Team Building</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Reviews</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Blog</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link link-reset">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

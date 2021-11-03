@@ -1,0 +1,103 @@
+.header
+{
+    position: relative;
+    background-color: var(--color-white);
+    height: 76px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    &__container
+    {
+        height: 100%;
+        .header__inner
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .header__logo
+            {
+                margin-top: 50px;
+            }
+            .navbar
+            {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                .navbar__list
+                {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    .navbar__item
+                    {
+                        margin-right: 32px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(3)
+                        {
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            &:hover
+                            {
+                                color: var(--color-primary);
+                                .navbar__link
+                                {
+                                    color: var(--color-primary);
+                                }
+                            }
+                            .drop-down
+                            {
+                                position: absolute;
+                                z-index: 2;
+                                top: 100%;
+                                transition: all .2s ease-in;
+                                left: 0;
+                                width: 195px;
+                                // display: none;
+                                padding: 24px 45px 24px 16px;
+                                background-color: var(--color-primary);
+                                .drop-down__item
+                                {
+                                    width: 100%;
+                                    margin-bottom: 16px;
+                                    .drop-down__link
+                                    {
+                                        color: var(--color-white);
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                    }
+                                    &:last-child
+                                    {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child
+                        {
+                            margin-right: 0;
+                        }
+                        .navbar__link
+                        {
+                            color: var(--color-black);
+                            font-weight: 14px;
+                            font-weight: 400;
+                            transition: all .2s ease-in;
+                            &:hover
+                            {
+                                color: var(--color-primary);
+                            }
+                            i
+                            {
+                                vertical-align: bottom;
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
