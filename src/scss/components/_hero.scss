@@ -1,0 +1,95 @@
+.hero
+{
+    position: relative;
+    height: 684px;
+    width: 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &::after
+    {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: url('../img/after-img.png');
+        background-repeat: no-repeat;
+        
+    }
+    .hero__container
+    {
+        width: 100%;
+        z-index: 5;
+        .hero__inner
+        {
+            .hero__content
+            {
+                .hero__title
+                {
+                    max-width: 834px;
+                    h1
+                    {
+                        font-family: var(--font-fugaz);
+                        font-size: 36px;
+                        color: var(--color-white);
+                        text-align: left;
+                        line-height: 52px;
+                    }
+                }
+                .hero__param
+                {
+                    max-width: 642px;
+                    margin-bottom: 40px;
+                    p
+                    {
+                        color: var(--color-white);
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 400;
+                    }
+                }
+                .hero__buttons
+                {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 48px;
+                    .btn-hero
+                    {
+                        &:first-child
+                        {
+                            margin-right: 14px;
+                        }
+                        &:last-child
+                        {
+                            i
+                            {
+                                transition: all .2s linear;
+                                margin-left: 23px;
+                            }
+                        }
+                    }
+                }
+                .icon__list
+                {
+                    display: flex;
+                    align-items: center;
+                    .icon__item
+                    {
+                        margin-right: 25px;
+                        &:last-child
+                        {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

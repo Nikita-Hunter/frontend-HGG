@@ -1,0 +1,22 @@
+.btn-primary
+{
+    display: block;
+    padding: 20px 56px;
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-white);
+    font-family: var(--font-fugaz);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+}
+.btn-transparent
+{
+    border: 1px solid var(--color-white);
+    display: block;
+    padding: 20px 56px;
+    font-weight: 400;
+    color: var(--color-white);
+    font-family: var(--font-fugaz);
+    text-transform: uppercase;
+}

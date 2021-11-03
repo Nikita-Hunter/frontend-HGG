@@ -3,6 +3,7 @@
     position: relative;
     background-color: var(--color-white);
     height: 76px;
+    z-index: 10;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     &__container
     {
@@ -50,7 +51,6 @@
                             .drop-down
                             {
                                 position: absolute;
-                                z-index: 2;
                                 top: 100%;
                                 transition: all .2s ease-in;
                                 left: 0;
