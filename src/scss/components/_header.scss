@@ -1,10 +1,14 @@
 .header
 {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
     background-color: var(--color-white);
     height: 76px;
     z-index: 10;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all .3s ease;
+    
     &__container
     {
         height: 100%;
@@ -14,9 +18,37 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
+            z-index: 10;
+            .right-block
+            {
+                display: none;
+                a
+                {
+                    &:first-child
+                    {
+                        margin-right: 23px;
+                        padding: 10px 28px !important;
+                        font-size: 12px;
+                    }
+                    &:nth-child(2)
+                    {
+                        margin-right: 24px;
+                    }
+                }
+                @media screen and (max-width:1000px){
+                    display: flex;
+                    align-items: center;
+                }
+            }
             .header__logo
             {
                 margin-top: 50px;
+                @media screen and (max-width:600px){
+                    .header__logo--icon
+                    {
+                        height: 64px;
+                    }
+                }
             }
             .navbar
             {
@@ -97,7 +129,128 @@
                         }
                     }
                 }
+                @media screen  and (max-width:1000px)
+                {
+                    display: none;
+                }
             }
         }
     }
+}
+.header.out
+{
+    transform: translateY(-200%);
+}
+.navbar-mobile
+{
+    display: none;
+    @media screen and(max-width:1000px){
+        width: 302px;
+        height: 100vh;
+        background-color: var(--color-light);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: initial;
+        transition: all .2s linear;
+        z-index: 6;
+        .navbar-mobile__list
+        {
+            width: 100%;
+            padding-top: calc(74px + 74px);
+            padding-bottom: 39px;
+            position: relative;
+            .navbar-mobile__item
+            {
+                padding-left: 16px;
+                margin-bottom: 16px;
+                .navbar-mobile__link
+                {
+                    font-size: 22px;
+                    text-align: left;
+                    color: var(--color-black);
+                    cursor: pointer;
+                    i
+                    {
+                        font-size: 14px;
+                        color: var(--color-span);
+                        margin-left: 19.7px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            ul
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                padding-top: calc(74px + 74px);
+                background-color: var(--color-light);
+                li
+                {
+                    padding-left: 16px;
+                    margin-bottom: 16px;
+                    a
+                    {
+                        font-size: 22px;
+                        text-align: left;
+                        color: var(--color-black);
+                        cursor: pointer;
+                        &:first
+                        {
+                            margin-bottom: 24px;
+                            i
+                            {
+                                margin-left: 17.7px;
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+        .navbar-mobile__contacts
+        {
+            width: 100%;
+            border-top: 1px solid rgba(41, 41, 41, 0.1);
+            padding: 13px 0 0 18px;
+            .navbar-mobile__contacts--geo
+            {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                span,a{
+                    font-size: 14px;
+                    color: var(--color-span);
+                    margin-left: 10.12px;
+                }
+            }
+        }
+        .navbar-mobile__social
+        {
+            width: 100%;
+            padding: 20px 0 0 22.2px;
+            display: flex;
+            align-items: center;
+            a
+            {
+                margin-right: 31px;
+                &:last-child
+                {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+.navbar-mobile.show
+{
+    left: 0;
+    transition: all .2s linear;
+}
+#mobileDropDown.showDropDown
+{
+    display: inline;
 }

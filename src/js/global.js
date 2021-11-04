@@ -24,3 +24,36 @@ $(document).ready(function(){
     },
   });
 });
+//popup video
+$(document).ready(function(){
+  $('.venobox').venobox(); 
+});
+//visibility header
+var header = $('.header'),
+	scrollPrev = 0;
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		header.addClass('out');
+	} else {
+		header.removeClass('out');
+	}
+	scrollPrev = scrolled;
+});
+$(document).ready(function(){
+  $('#menuBtn').click(function(){
+    $('#navMobile').toggleClass('show');
+  });
+});
+$(document).ready(function(){
+  $('#openDropDown').click(function(){
+    $('#mobileDropDown').addClass('showDropDown');
+  });
+});
+$(document).ready(function(){
+  $('#closeDropDown').click(function(){
+    $('#mobileDropDown').removeClass('showDropDown');
+  });
+});

@@ -9,6 +9,16 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media screen and (max-width:1000px){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width:414px){
+        height: 100%;
+        min-height: 100%;
+        padding-bottom: 20px;
+    }
     &::after
     {
         content: '';
@@ -30,12 +40,20 @@
         .hero__inner
         {
             padding-top: 70px;
+            @media screen and (max-width:1000px){
+                padding-top: 0;
+            }
             .hero__content
             {
+                
                 .hero__title
                 {
                     max-width: 844px;
                     margin-bottom: 16px;
+                    @media screen and (max-width:1000px){
+                        max-width: 100%;
+                        width: 100%;
+                    }
                     h1
                     {
                         font-family: var(--font-fugaz);
@@ -45,18 +63,33 @@
                         line-height: 52px;
                         font-weight: 400;
                         text-transform: uppercase;
+                        @media screen and (max-width:1000px){
+                            text-align: center;
+                            width: 100%;
+                        }
+                        @media screen and (max-width:530px){
+                            font-size: 22px;
+                        }
                     }
                 }
                 .hero__param
                 {
                     max-width: 642px;
                     margin-bottom: 43px;
+                    @media screen and (max-width:1000px){
+                        max-width: 100%;
+                        width: 100%;
+                    }
                     p
                     {
                         color: var(--color-white);
                         font-size: 16px;
                         line-height: 26px;
                         font-weight: 400;
+                        @media screen and (max-width:1000px){
+                            text-align: center;
+                            font-size: 14px;
+                        }
                     }
                 }
                 .hero__buttons
@@ -64,6 +97,11 @@
                     display: flex;
                     align-items: center;
                     margin-bottom: 48px;
+                    @media screen and (max-width:1000px){
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
                     .btn-hero
                     {
                         &:first-child
@@ -84,6 +122,11 @@
                 {
                     display: flex;
                     align-items: center;
+                    @media screen and (max-width:1000px){
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
                     .icon__item
                     {
                         margin-right: 25px;
